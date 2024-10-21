@@ -16,29 +16,29 @@
 <h1 style="text-align:center"> Formularz do wypełnienia</h1>
 <div>
   <form action="jakas-strona.com" target="_self">
-      <label>Imię:</label><input type="text"><br/>
-      <label> Nazwisko:</label> <input type="text"><br/>
+      <label>Imię:</label><input type="text" required><br/>
+      <label> Nazwisko:</label> <input type="text" required><br/>
       <label> Płeć:</label>
-      <select>
+      <select required>
           <option value="None"></option>
           <option value="Male"> Mężczyzna </option>
           <option value="Female">Kobieta</option>
           <option value="Joke">Helikopter bojowy</option>
       </select><br/>
-      <label>Państwo: </label><input type="text">
-      <label> Miasto:</label> <input type="text"><br/>
-      <label> Ulica:</label> <input type="text">
-      <label> Numer domu:</label> <input type="number" maxlength="5">
-      <label> Numer mieszkania (Opcjonalnie):</label> <input type="number" maxlength="4"><br/>
-      <label> Numer telefonu:</label> <input type="tel" maxlength="20"><br/>
-      <label> Data urodzenia:</label> <input type="date"><br/>
+      <label>Państwo: </label><input type="text" required>
+      <label> Miasto:</label> <input type="text" required><br/>
+      <label> Ulica:</label> <input type="text" required>
+      <label> Numer domu:</label> <input type="number" size="5" required>
+      <label> Numer mieszkania (Opcjonalnie):</label> <input type="number" size="4"><br/>
+      <label> Numer telefonu:</label> <input type="tel" maxlength="15" required><br/>
+      <label> Data urodzenia:</label> <input type="date" required><br/>
       <label> Czy posiadasz prawo jazdy:</label>
-      <select>
+      <select required>
           <option value="None"></option>
           <option value="True"> Tak </option>
           <option value="False">Nie</option>
       </select><br/>
-      <label> Hasło:</label> <input type="password"><br/>
+      <label> Hasło:</label> <input type="password" required><br/>
       <label>Zatwierdź</label> <input type="submit">
 
   </form>
