@@ -1,0 +1,39 @@
+div{
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    height: 100%;
+    margin:auto;
+}
+.przyciski{
+    width: 25%;
+    height: auto;
+    float: left;
+}
+button{
+    width: 100%;
+    height: 100%;
+    background-color: #55ffd8;
+    padding: 20px;
+    border-radius: 25px;
+    font-size: 150%;
+    color: #4949d5;
+}
+.button_2{
+    width: 100%;
+    height: 100%;
+    background-color: #5eff2f;
+    padding: 20px;
+    border-radius: 25px;
+    font-size: 150%;
+    color: #4949d5;
+}
+
+.div_input{
+    width: 90%;
+    height: 20px;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid black;
+    font-size: 150%;
+}
