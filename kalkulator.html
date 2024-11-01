@@ -4,12 +4,7 @@
     <meta charset="UTF-8">
     <title>Kalkulator</title>
     <link rel="stylesheet" href="kalkulator.css">
-    <script>
-        function klik(tresc)
-        {
-            document.getElementById("okno").innerHTML+= tresc
-        }
-    </script>
+    <script src="kalkulatorFile.js"></script>
 </head>
 <body>
 <div>
@@ -17,33 +12,33 @@
 </div>
 <div>
     <div class="przyciski"><button onclick="klik(this.innerText)">7</button></div>
-    <div class="przyciski"><button>8</button></div>
-    <div class="przyciski"><button>9</button></div>
-    <div class="przyciski" ><button class="button_2">/</button></div>
+    <div class="przyciski"><button onclick="klik(this.innerText)">8</button></div>
+    <div class="przyciski"><button onclick="klik(this.innerText)">9</button></div>
+    <div class="przyciski" ><button class="button_2" onclick="klik(this.innerText)">/</button></div>
 </div>
 <div>
-    <div class="przyciski"><button>6</button></div>
-    <div class="przyciski"><button>5</button></div>
-    <div class="przyciski"><button>4</button></div>
-    <div class="przyciski"><button class="button_2">x</button></div>
+    <div class="przyciski"><button  onclick="klik(this.innerText)">6</button></div>
+    <div class="przyciski"><button onclick="klik(this.innerText)">5</button></div>
+    <div class="przyciski"><button onclick="klik(this.innerText)">4</button></div>
+    <div class="przyciski"><button class="button_2" onclick="klik(this.innerText)">*</button></div>
 </div>
 <div>
-    <div class="przyciski"><button>7</button></div>
-    <div class="przyciski"><button>8</button></div>
-    <div class="przyciski"><button>9</button></div>
-    <div class="przyciski"><button class="button_2">-</button></div>
+    <div class="przyciski"><button onclick="klik(this.innerText)">7</button></div>
+    <div class="przyciski"><button onclick="klik(this.innerText)">8</button></div>
+    <div class="przyciski"><button onclick="klik(this.innerText)">9</button></div>
+    <div class="przyciski"><button class="button_2" onclick="klik(this.innerText)">-</button></div>
 </div>
 <div>
-    <div class="przyciski"><button>3</button></div>
-    <div class="przyciski"><button>2</button></div>
-    <div class="przyciski"><button>1</button></div>
-    <div class="przyciski" ><button class="button_2">+</button></div>
+    <div class="przyciski"><button onclick="klik(this.innerText)">3</button></div>
+    <div class="przyciski"><button onclick="klik(this.innerText)">2</button></div>
+    <div class="przyciski"><button onclick="klik(this.innerText)">1</button></div>
+    <div class="przyciski" ><button class="button_2" onclick="klik(this.innerText)">+</button></div>
 </div>
 <div>
-    <div class="przyciski"><button>0</button></div>
-    <div class="przyciski"><button>.</button></div>
-    <div class="przyciski"><button style="background-color: #dd4444">C</button></div>
-    <div class="przyciski"><button class="button_2">=</button></div>
+    <div class="przyciski"><button onclick="klik(this.innerText)">0</button></div>
+    <div class="przyciski"><button onclick="klik(this.innerText)">.</button></div>
+    <div class="przyciski"><button style="background-color: #dd4444" onclick="wyczysc()">C</button></div>
+    <div class="przyciski"><button class="button_2" onclick="wynik()">=</button></div>
 </div>
 <script>
 
