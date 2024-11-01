@@ -6,11 +6,13 @@ div{
     margin:auto;
     overflow: auto;
     overflow-y: hidden;
+    font-family: "Bahnschrift", serif;
 }
 .przyciski{
     width: 25%;
     height: auto;
     float: left;
+    font-family:"Bahnschrift", serif;
 }
 button {
     width: 100%;
@@ -20,6 +22,7 @@ button {
     border-radius: 25px;
     font-size: 150%;
     color: #4949d5;
+    font-family:"Bahnschrift",serif;
 }
 .button_2{
     width: 100%;
@@ -29,6 +32,7 @@ button {
     border-radius: 25px;
     font-size: 150%;
     color: #4949d5;
+    font-family:"Bahnschrift",serif;
 }
 
 .div_input{
@@ -38,4 +42,5 @@ button {
     border-radius: 25px;
     border: 2px solid black;
     font-size: 150%;
+
 }
