@@ -4,13 +4,15 @@ div{
     max-width: 100%;
     height: 100%;
     margin:auto;
+    overflow: auto;
+    overflow-y: hidden;
 }
 .przyciski{
     width: 25%;
     height: auto;
     float: left;
 }
-button{
+button {
     width: 100%;
     height: 100%;
     background-color: #55ffd8;
