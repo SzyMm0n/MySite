@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formularz</title>
   <link rel="stylesheet" href="formularzWalidowany.css">
 </head>
@@ -29,7 +29,7 @@
     </div>
     <!--Początek drugiego wiersza-->
     <div>
-      <p><br></p>
+      <p><br/></p>
       <div class="uklad"> <!-- Pierwszy element-->
         <label>Państwo: <input type="text" required placeholder="Polska"></label>
       </div>
@@ -39,7 +39,7 @@
     </div>
     <!-- Początek trzeciego wiersza-->
     <div>
-      <p><br></p>
+      <p><br/></p>
       <div class="uklad">
         <label> Ulica:<input type="text" required placeholder="Armii Krajowej"></label>
       </div>
@@ -50,7 +50,32 @@
         <label> Numer mieszkania:<input type="number" size="4" style="width: 10%"></label>
       </div>
     </div>
-
+    <!-- Początek czwartego wiersza-->
+    <div>
+      <div class="uklad" style="width: 40%">
+        <label> Numer telefonu: <input type="tel" maxlength="15" required placeholder="333 333 333"></label>
+      </div>
+      <div class="uklad">
+        <label> Data urodzenia:<input type="date" required></label>
+      </div>
+    </div>
+    <!-- Początek piątego wiersza-->
+    <div>
+      <div class="uklad">
+      <label> Czy posiadasz prawo jazdy:
+      <input type="checkbox" value="True"> Tak</label>
+      </div>
+    </div>
+    <!-- Początek szóstego wiersza-->
+    <div>
+        <p><br/><br><br></p>
+        <label> Hasło:<input type="password" required></label>
+    </div>
+    <div>
+      <div>
+        <button>Przycisk</button>
+      </div>
+    </div>
   </form>
 </body>
 </html>
