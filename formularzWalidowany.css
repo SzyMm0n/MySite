@@ -1,8 +1,15 @@
 div{
+    width: 100%;
+    height: auto;
     margin: auto;
     font-size:16px;
-    font-family:MV Boli;
+    font-family:"MV Boli",serif;
     text-shadow: 3px 3px 4px;
+}
+.uklad{
+    width:33%;
+    height:auto;
+    margin:auto;
     float: left;
 }
 h1{

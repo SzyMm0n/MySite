@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl" xmlns="http://www.w3.org/1999/html">
+<html lang="pl" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
   <title>Formularz</title>
@@ -7,30 +7,50 @@
 </head>
 <body bgcolor="cc9966">
 <h1> Formularz do wypełnienia</h1>
-<div>
   <form action="jakas-strona.com" target="_self">
-    <label>Imię:</label><input type="text" required placeholder="Jan"><br/>
-    <label> Nazwisko:</label> <input type="text" required placeholder="Kowalski"><br/>
-    <label> Płeć:</label>
-    <select required>
-      <option value="None">Wybierz</option>
-      <option value="Male"> Mężczyzna </option>
-      <option value="Female">Kobieta</option>
-    </select><br/>
-    <label>Państwo: </label><input type="text" required placeholder="Polska">
-    <label> Miasto:</label> <input type="text" required placeholder="Warszawa"><br/>
-    <label> Ulica:</label> <input type="text" required placeholder="Armii Krajowej">
-    <label> Numer domu:</label> <input type="number" size="5" required placeholder="1">
-    <label> Numer mieszkania (Opcjonalnie):</label> <input type="number" size="4"><br/>
-    <label> Numer telefonu:</label> <input type="tel" maxlength="15" required placeholder="333 333 333"><br/>
-    <label> Data urodzenia:</label> <input type="date" required><br/>
-    <label> Czy posiadasz prawo jazdy:</label>
-    <input type="checkbox"> Tak
-    <br/>
-    <label> Hasło:</label> <input type="password" required><br/>
-    <button>Przycisk</button>
+    <div>
+      <!--Początek pierwszego wiersza formularza-->
+      <div class="uklad"> <!-- Pierszy element -->
+        <label>Imię: <input type="text" required placeholder="Jan"></label>
+      </div>
+
+      <div class="uklad"> <!-- Drugi element -->
+        <label> Nazwisko: <input type="text" required placeholder="Kowalski"></label>
+      </div>
+
+      <div class="uklad"> <!-- Trzeci element -->
+      <label> Płeć:
+      <select required>
+        <option value="None">Wybierz</option>
+        <option value="Male"> Mężczyzna </option>
+        <option value="Female">Kobieta</option>
+      </select></label>
+      </div>
+    </div>
+    <!--Początek drugiego wiersza-->
+    <div>
+      <p><br></p>
+      <div class="uklad"> <!-- Pierwszy element-->
+        <label>Państwo: <input type="text" required placeholder="Polska"></label>
+      </div>
+      <div class="uklad"><!-- Drugi element-->
+        <label> Miasto:<input type="text" required placeholder="Warszawa"></label>
+      </div>
+    </div>
+    <!-- Początek trzeciego wiersza-->
+    <div>
+      <p><br></p>
+      <div class="uklad">
+        <label> Ulica:<input type="text" required placeholder="Armii Krajowej"></label>
+      </div>
+      <div class="uklad">
+        <label> Numer domu:<input type="number" size="5" required placeholder="1" style="width: 10%"></label>
+      </div>
+      <div class="uklad">
+        <label> Numer mieszkania:<input type="number" size="4" style="width: 10%"></label>
+      </div>
+    </div>
 
   </form>
-</div>
 </body>
 </html>
