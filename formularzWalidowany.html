@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="pl" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
   <title>Formularz</title>
   <link rel="stylesheet" href="formularzWalidowany.css">
+  <script src="Walidacja.js"></script>
 </head>
 <body bgcolor="cc9966">
 <h1> Formularz do wypełnienia</h1>
@@ -11,17 +12,17 @@
     <div>
       <!--Początek pierwszego wiersza formularza-->
       <div class="uklad"> <!-- Pierszy element -->
-        <label>Imię: <input type="text" required placeholder="Jan"></label>
+        <label>Imię: <input type="text" required placeholder="Jan" oninput="Imie(this,this.value)"></label>
       </div>
       <div class="uklad"> <!-- Drugi element -->
-        <label> Nazwisko: <input type="text" required placeholder="Kowalski"></label>
+        <label> Nazwisko: <input type="text" required placeholder="Kowalski" oninput="Nazwisko(this,this.value)" ></label>
       </div>
       <div class="uklad"> <!-- Trzeci element -->
       <label> Płeć:
       <select required>
-        <option value="None">Wybierz</option>
-        <option value="Male"> Mężczyzna </option>
-        <option value="Female">Kobieta</option>
+        <option value="None" >Wybierz</option>
+        <option value="Male" style="background-color: #00adb6"> Mężczyzna </option>
+        <option value="Female" style="background-color: #ff57b2">Kobieta</option>
       </select></label>
       </div>
     </div>
@@ -29,10 +30,10 @@
     <div>
       <p><br/></p>
       <div class="uklad"> <!-- Pierwszy element-->
-        <label>Państwo: <input type="text" required placeholder="Polska"></label>
+        <label>Państwo: <input type="text" required placeholder="Polska" onblur="Panstwo(this.value)"></label>
       </div>
       <div class="uklad"><!-- Drugi element-->
-        <label> Miasto:<input type="text" required placeholder="Warszawa"></label>
+        <label> Miasto:<input type="text" required placeholder="Warszawa" onblur="Miasto(this.value)"></label>
       </div>
     </div>
     <!-- Początek trzeciego wiersza-->
@@ -42,19 +43,19 @@
         <label> Ulica:<input type="text" required placeholder="Armii Krajowej"></label>
       </div>
       <div class="uklad">
-        <label> Numer domu:<input type="number" size="5" required placeholder="1" style="width: 10%"></label>
+        <label> Numer domu:<input type="text" size="5" required placeholder="1" style="width: 15%" maxlength="5" oninput="NumerDomu(this,this.value)"></label>
       </div>
       <div class="uklad">
-        <label> Numer mieszkania:<input type="number" size="4" style="width: 10%"></label>
+        <label> Numer mieszkania:<input type="number" size="4" style="width: 15%" min="1" max="999" onblur="NumerMieszkania(this.value)"></label>
       </div>
     </div>
     <!-- Początek czwartego wiersza-->
     <div>
       <div class="uklad" style="width: 40%">
-        <label> Numer telefonu: <input type="tel" maxlength="15" required placeholder="333 333 333"></label>
+        <label> Numer telefonu: <input type="tel" maxlength="15" required placeholder="333 333 333" onblur="NumerTelefonu(this, this.value)"></label>
       </div>
       <div class="uklad">
-        <label> Data urodzenia:<input type="date" required></label>
+        <label> Data urodzenia:<input type="date" required onblur="Data(this.value)"></label>
       </div>
     </div>
     <!-- Początek piątego wiersza-->
@@ -71,7 +72,7 @@
     </div>
     <div>
       <div>
-        <button>Przycisk</button>
+        <button>Wyślij</button>
       </div>
     </div>
   </form>
