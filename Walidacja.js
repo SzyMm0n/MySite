@@ -10,7 +10,7 @@ function Imie(sender, tresc){
     }
 }
 function Nazwisko(sender,tresc) {
-    var pattern = /((^[A-Z][a-z]+-?)[A-Z][a-z]+$)|(^[A-Z][a-z]+\s?)[A-Z][a-z]+$/g
+    var pattern = /((^[A-Z][a-z]+-?)[A-Z][a-z]+$)|(^[A-Z][a-z]+\s?[A-Z][a-z]+$)|^[A-Z]\w+)/g
 
     if (pattern.test(tresc) === true )
     {
