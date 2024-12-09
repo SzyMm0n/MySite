@@ -1,3 +1,7 @@
+<?php
+include('czyzalogowany.php')
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -7,29 +11,42 @@
 </head>
 <body bgcolor="87CEEB">
 <div>
-<h1>To jest strona internetowa Szymona Marciniaka</h1>
+    <h1>To jest strona internetowa Szymona Marciniaka</h1>
 </div>
 <div>
     <h2>Laboratoria 2</h2>
-    <p><a href="tabela.html">TABELA</a></p>
-    <p><a href="formularz.html">FORMULARZ</a></p>
+    <p><a href="tabela.php">TABELA</a></p>
+    <p><a href="formularz.php">FORMULARZ</a></p>
 </div>
 <div>
     <h2>Laboratoria 3</h2>
-    <p><a href="tabelaDIV.html">TABELA</a></p>
-    <p><a href="formularzBIB.html">FORMULARZ</a></p>
+    <p><a href="tabelaDIV.php">TABELA</a></p>
+    <p><a href="formularzBIB.php">FORMULARZ</a></p>
 </div>
 <div>
     <h2>Laboratioria 4</h2>
-    <p><a href="kalkulator.html">KALKULATOR</a></p>
+    <p><a href="kalkulator.php">KALKULATOR</a></p>
 </div>
 <div>
     <h2>Laboratoria 5</h2>
-    <p><a href="formularzWalidowany.html">FORMULARZ Z WALIDACJĄ</a></p>
+    <p><a href="formularzWalidowany.php">FORMULARZ Z WALIDACJĄ</a></p>
+</div>
+<div>
+    <h2>Laboratoria 6</h2>
+    <p><a href="wyswietlanyFormularz.php">WYŚWIETLANY FORMULARZ</a></p>
+    <p><a href="kod.php">KOD PHP</a></p>
+</div>
+<div>
+    <h2>Laboratoria 7</h2>
+    <p><a href="baza.php">BAZA DANYCH</a></p>
+    <p><a href="kod.txt">KOD DO BAZY DNAYCH</a></p>
 </div>
 <div>
     <h2>Laboratoria 8</h2>
     <p><a href="faktura.xml">FAKTURA</a></p>
 </div>
+<form action="logout.php" method="post">
+    <button type="submit">Wyloguj</button>
+</form>
 </body>
 </html>
