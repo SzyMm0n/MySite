@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-image: url("Zdjecia/faktura.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
 }
 .row {
     display: flex;
