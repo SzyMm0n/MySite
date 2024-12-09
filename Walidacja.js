@@ -10,7 +10,7 @@ function Imie(sender, tresc){
     }
 }
 function Nazwisko(sender,tresc) {
-    var pattern = /((^[A-Z][a-z]+-?)[a-z]+\w$)|(^[A-Z][a-z]+\s?)[A-Z][a-z]+\w$/g
+    var pattern = /^[A-Z][a-z]*((-[A-Z][a-z]+)|(\s[A-Z][a-z]+))?$/g
 
     if (pattern.test(tresc) === true )
     {
@@ -19,12 +19,12 @@ function Nazwisko(sender,tresc) {
     else sender.style.textDecorationLine = "line-through";
 }
 function Panstwo(tresc) {
-    var pattern = /^[A-Z][a-z]*$/g
+    var pattern = /^[A-Z][a-z]*(\s[A-Z][a-z]*)?$/g
     if (pattern.test(tresc) !==true || tresc.length > 30)
         alert("Państwo powinno się zaczynać dużą literą i mieć mniej niż 30 znaków");
 }
 function Miasto(tresc) {
-    var pattern = /^[A-Z][a-z]*$/
+    var pattern = /^[A-Z][a-z]*(\s[A-Z][a-z]*)?$/
     if (pattern.test(tresc) !==true || tresc.length > 20)
         alert("Miasto powinno się zaczynać dużą literą i mieć mniej niż 20 znaków");
 }
