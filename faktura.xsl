@@ -14,10 +14,10 @@
                     <xsl:for-each select="invoice/items/item">
                         <div class="row">
                             <div class="cell" style="width: 14%;">
-                                <p><xsl:value-of select="amount" /> </p>
+                                <p><xsl:value-of select="amount" /></p>
                             </div>
                             <div class="cell" style="width: 48%;">
-                                <p><xsl:value-of select="description"/> </p>
+                                <p><xsl:value-of select="description" /></p>
                             </div>
                             <div class="cell" style="width: 20%;">
                                 <p><xsl:value-of select="pricePerUnit" /></p>
@@ -31,16 +31,34 @@
                 <div class="placementSum" style="font-weight: bold; text-align: left;">
                     Total: <xsl:call-template name="calculateTotal" />
                 </div>
+
+                <!-- Dodatkowe divy dla 23% i 77% -->
+                <div class="placementPercentage">
+                    <xsl:variable name="total">
+                        <xsl:call-template name="getTotal" />
+                    </xsl:variable>
+
+                    <div class="twentyThreePercent" style="font-weight: bold; text-align: left;">
+                        23%: <xsl:value-of select="format-number($total * 0.23, '0.00')" />
+                    </div>
+                    <div class="seventySevenPercent" style="font-weight: bold; text-align: left;">
+                        77%: <xsl:value-of select="format-number($total * 0.77, '0.00')" />
+                    </div>
+                </div>
             </body>
         </html>
     </xsl:template>
 
-    <!-- Template to calculate total sum -->
-    <xsl:template name="calculateTotal">
+    <!-- Template to get total sum -->
+    <xsl:template name="getTotal">
         <xsl:call-template name="sumItems">
             <xsl:with-param name="items" select="/invoice/items/item" />
             <xsl:with-param name="total" select="0" />
         </xsl:call-template>
+    </xsl:template>
+
+    <xsl:template name="calculateTotal">
+        <xsl:call-template name="getTotal" />
     </xsl:template>
 
     <xsl:template name="sumItems">
@@ -56,7 +74,7 @@
                 </xsl:call-template>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:value-of select="format-number($total, '0.00')" />
+                <xsl:value-of select="$total" />
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
