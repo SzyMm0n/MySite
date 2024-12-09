@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="faktura.xsl"?>
+<invoice>
+    <items>
+        <item>
+            <amount>50</amount>
+            <description>Wieszaki</description>
+            <pricePerUnit>1.50</pricePerUnit>
+        </item>
+        <item>
+            <amount>150</amount>
+            <description>Poduszki</description>
+            <pricePerUnit>23.2</pricePerUnit>
+        </item>
+        <item>
+            <amount>450</amount>
+            <description>Krzesła</description>
+            <pricePerUnit>400</pricePerUnit>
+        </item>
+    </items>
+</invoice>

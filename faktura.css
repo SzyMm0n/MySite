@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("Zdjecia/faktura.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.row {
+    display: flex;
+    position:relative;
+    width:100%;
+    height:4%;
+}
+.cell {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #aef199;
+    border: 1px solid black;
+}
+.placement {
+    position:relative;
+    width:100%;
+    height:100%;
+    top: 23.4%;
+}
+.placementSum{
+    position:relative;
+    width: 20%;
+    height:4%;
+    top:-27%;
+    left:90%
+}
