@@ -37,10 +37,10 @@
                         <xsl:call-template name="getTotal" />
                     </xsl:variable>
 
-                    <div class="placmentSum" style="font-weight: bold; text-align: left;">
+                    <div class="placementPercentage" style="font-weight: bold; text-align: left;">
                         <xsl:value-of select="format-number($total * 0.23, '0.00')" />
                     </div>
-                    <div class="placmentSum" style="font-weight: bold; text-align: left;">
+                    <div class="placementPercentage" style="font-weight: bold; text-align: left;">
                         <xsl:value-of select="format-number($total * 0.77, '0.00')" />
                     </div>
                 </div>
