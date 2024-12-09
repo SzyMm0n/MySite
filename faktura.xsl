@@ -29,27 +29,25 @@
                     </xsl:for-each>
                 </div>
                 <div class="placementSum" style="font-weight: bold; text-align: left;">
-                    Total: <xsl:call-template name="calculateTotal" />
+                    <xsl:call-template name="calculateTotal" />
                 </div>
 
-                <!-- Dodatkowe divy dla 23% i 77% -->
-                <div class="placementPercentage">
+                <div>
                     <xsl:variable name="total">
                         <xsl:call-template name="getTotal" />
                     </xsl:variable>
 
-                    <div class="twentyThreePercent" style="font-weight: bold; text-align: left;">
-                        23%: <xsl:value-of select="format-number($total * 0.23, '0.00')" />
+                    <div class="placment" style="font-weight: bold; text-align: left;">
+                        <xsl:value-of select="format-number($total * 0.23, '0.00')" />
                     </div>
-                    <div class="seventySevenPercent" style="font-weight: bold; text-align: left;">
-                        77%: <xsl:value-of select="format-number($total * 0.77, '0.00')" />
+                    <div class="placment" style="font-weight: bold; text-align: left;">
+                        <xsl:value-of select="format-number($total * 0.77, '0.00')" />
                     </div>
                 </div>
             </body>
         </html>
     </xsl:template>
 
-    <!-- Template to get total sum -->
     <xsl:template name="getTotal">
         <xsl:call-template name="sumItems">
             <xsl:with-param name="items" select="/invoice/items/item" />
